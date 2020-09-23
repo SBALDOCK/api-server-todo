@@ -1,6 +1,7 @@
 'use strict';
 
 const express = require('express');
+const cors = require('cors');
 
 // Custom Middleware
 const errorHandler = require('../middleware/500.js');
@@ -10,6 +11,7 @@ const notFoundHandler = require('../middleware/404.js');
 const apiRouter = require('../routes/api-v1.js');
 
 const app = express();
+app.use(cors());
 
 app.use(express.json());
 

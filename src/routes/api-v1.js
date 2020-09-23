@@ -18,7 +18,7 @@ router.delete('/:model/:id', handleDelete);
 
 // Route Handlers
 async function handleGetAll(req, res, next) {
-
+  console.log(req)
   try {
     const results = await req.model.get();
 
